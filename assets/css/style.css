@@ -1,0 +1,473 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.row{
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.col{
+    float: left;
+}
+html{
+    scroll-behavior: smooth;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+}
+/* 1.Vị trí
+2. Kích thước
+3. Màu sắc
+4. Kiểu dáng */
+/* #main
+{
+    
+} */
+#header
+{
+    height: 46px;
+    background-color:  #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+#nav{
+    
+}
+
+#nav li{
+    display: inline-block;
+    position: relative;
+}
+#nav li:hover .subnav {
+    display: block;
+}
+#nav > li:hover > a,#nav .subnav li:hover {
+    color: #000;
+    background-color: #ccc ;
+}
+
+#nav > li > a{
+    color: #fff;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+#nav .subnav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color:  #fff;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+#nav .subnav a{
+    color: #000;
+    text-decoration: none;
+    line-height: 38px;
+    padding: 0 16px;
+    display: inline-block;
+}
+#nav .subnav li {
+    display: block;
+}
+#header .search
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 46px;
+    padding: 0 24px;
+    color: #fff;
+    text-decoration: none;
+}
+#header .search:hover
+{
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#slider
+{
+    position: relative;
+    padding-top: 50%;
+    margin-top: 46px;
+    background: url(https://www.w3schools.com/w3images/ny.jpg) top center /cover no-repeat;
+}
+#slider .text-content{
+    position: absolute;
+    bottom: 47px;
+    color: #fff;
+    /* left: 50%;
+    transform: translateX(-50%); */
+    text-align: center;
+    width: 100%;
+}
+#slider .text-heading{
+    font-weight: 250;
+    font-size: 24px;
+    margin-top: 10px;
+}
+#slider .text-description{
+    font-size: 15px;
+    margin-top: 25px;
+}
+#content
+{
+    
+}
+#content .container
+{
+    padding: 64px 16px;
+    width: 800px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: margin 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+  @media (max-width: 1200px) {
+      .container {
+          float: center;
+      }
+      
+  }
+
+  @media (max-width: 808px) {
+      .container {
+          margin: 20px auto;
+          width: 100% !important;
+      }
+
+      .member-img {
+          max-width: 60.15%;
+      }
+      /* .modal{
+            width: 100%;
+      } */
+  }
+  @media (max-width: 600px) {
+    .container {
+        margin: 5px auto;
+        width: 100%;
+    }
+
+    .member-list {
+        flex-direction: column;
+        flex-shrink: 1;
+        max-width: 100%;
+    }
+    .member-item {
+        width: 100% !important;
+        height: 100% !important;
+        text-align: center;
+        margin-bottom: 32px;
+        margin-left: 0px !important;
+    }
+    .container>.member-img {
+        width: 331.91;
+        height: 331.91;
+    }
+    .modal{
+        width: 100%;
+    }
+  }
+#content .content-section{
+    
+}
+#content .section-heading{
+    margin: 10px 0;
+    line-height: 45px;
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+#content .section-sub-heading{
+    margin: 15px 0;
+    text-align: center;
+    line-height: 22.5px;
+    font-size: 15px;
+    font-style: italic;
+    font-family: Verdana,sans-serif;
+    color: #828282;
+}
+#content .about-text{
+    margin: 15px 0;
+    line-height: 22.5px;
+    font-size: 15px;
+    text-align: justify;
+    font-family: lato, sans-serif;
+    line-height: 1.4;
+}
+#content .about-text,
+.container .member-name {
+    line-height: 22.5px;
+    font-size: 15px;
+    font-family: lato, sans-serif;
+    line-height: 1.4;
+}
+.container .member-list{
+    padding: 32px 0;
+    display: flex;
+    
+}
+.container .member-item{
+    width: 33.333%;
+    height: 33.333%;
+    box-sizing: border-box;
+    text-align: center;
+}
+.container .member-name{
+    margin: 15px 0;
+
+}
+.container .member-img {
+    width: 60.15%;
+    height: 60.15%;
+    margin-top: 16px;
+    border-radius: 4px;
+}
+.container-tour
+{
+    background-color: #000;
+}
+
+.text-white{
+    color: #fff !important;
+}
+.tickets-list{
+    background-color: #fff;
+    list-style-type: none;
+    margin-top: 40px;
+}
+.tickets-list li{
+    border-bottom: 0.7px solid rgb(221, 221, 221);
+    font-size: 15px;
+    line-height: 22px;
+    padding: 8px 16px;
+    color: rgb(117, 117, 117);
+}
+
+.sold-out
+{
+    background-color: red;
+    padding: 3px 8px;
+    margin-left: 16px;
+    color: white;
+}
+.quantity{
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    float: right;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+}
+.container-tour .member-list{
+    display: flex;
+    padding: 32px 0 !important;
+}
+.text{
+    font-family: Lato, sans-serif;
+    font-size: 15px;
+    line-height: 22.5px;
+}
+.container-tour .member-item{
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    width: 33.333%;
+    text-align: left;
+}
+.container-tour .member-item + .member-item {
+    margin-left: 8px;
+}
+.place-body{
+
+}
+.nation-img{
+   width: 100%;
+}
+.nation{
+    margin: 16px 0;
+}
+.date{
+    margin: 15px 0;
+    opacity: 0.6;
+}
+.description{
+
+}
+.buy-tickets{
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    padding: 8px 16px;
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    left: 16px;
+    margin: 16px 0;
+    cursor: pointer;
+    border: 0px;
+}
+.buy-tickets:hover, .send:hover{
+    background-color: #ccc;
+    color: #000;
+}
+.nation, .date, .description{
+    padding: 0 16px;
+}
+
+.modal{
+    width: 900px;
+    background-color: #fff;
+    animation: modalFadeIn ease .5s;
+    position: relative;
+    box-sizing: border-box;
+}
+.overlay{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+.tickets{
+    background-color: rgb(0, 150, 136);
+    line-height: 129px;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    letter-spacing: 4px;
+}
+.modal-body{
+    margin: 0 16px;
+}
+.person,.send-to{
+    cursor: default;
+    margin: 15px 0;
+}
+.input{
+    padding: 8px 8px 8px 8px;
+    border: solid .741px rgb(204, 204, 204);
+}
+.modal-input{
+    width: 100%;
+}
+.pay{
+    background-color: rgb(0, 150, 136);
+    color: #fff;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 16px 0;
+}
+.close{
+    background-color: rgb(244, 67, 54);
+    border: 0px;
+    margin: 16px 0;
+    padding: 8px 16px;
+    color: #fff;
+}
+.close:hover, .pay:hover{
+    opacity: 0.8;
+}
+.help{
+    float: right;
+    margin: 16px 0px 16px 16px;
+    
+}
+.help>a{
+    color: rgb(33, 150, 243);
+}
+@keyframes modalFadeIn {
+    from{
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(-0%);
+        opacity: 1;
+    }
+    
+}
+.col-half{
+    width: 50%;
+}
+.name-email{
+    display: flex;
+    margin-bottom: 16px;
+    
+}
+.form-name, .form-email{
+    width: 50%;
+    height: 22.5px;
+}
+.form-name{
+    margin-right: 8px;
+}
+.form-email{
+    float: right;
+}
+.form-message{
+    width: 100%;
+    line-height: 22.5px;
+    margin-top: 16px;
+}
+.form-symbol{
+    width: 32px;
+}
+.size-input-form
+{
+    width: 100%;
+    line-height: 22.5px;
+}
+.send{
+    background-color: #000;
+    color: #fff;
+    padding: 8px 16px;
+    margin: 16px 0;
+    float: right;
+    border: 0px;
+}
+.footer-img
+{
+    margin-top: 50px;
+    width: 100%;
+}
+.symbols
+{
+    font-size: 24px;
+    margin: 16px 0;
+}
+.symbols i:hover{
+    opacity: 0.8;
+    
+}
+#footer{
+    text-align: center;
+    opacity: 0.6;
+}
+.link{
+    cursor: pointer;
+    opacity: 0.9;
+    color: #000;
+}
