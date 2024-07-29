@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Band Website</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
@@ -33,6 +34,9 @@
             <div class="search">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div> 
+            <div id="mobile-menu"  class="mobile-menu-btn">
+                <i class="mobile-menu-icon fa-solid fa-bars"></i>
+            </div>
         </div>
 
         <div id="slider">
@@ -123,17 +127,17 @@
                     <p class="section-sub-heading">Fan? Drop a note!</p>
                 </div>
                 <div class="body-contact">
-                    <div class="col col-half">
+                    <div class="col col-half s-col-full">
                         <p class="text"><i class="form-symbol fa-solid fa-location-dot"></i>Chicago, US</p>
                         <p class="text"><i class="form-symbol fa-solid fa-phone"></i>Phone: +00 1515151515</p>
                         <p class="text"><i class="form-symbol fa-solid fa-envelope"></i>Email: mail@mail.com</p>
                     </div>
-                    <form action="" class="col col-half">
+                    <form action="" class="col col-half s-col-full">
                         <div class="name-email">
-                            <div class="col col-half form-name">
+                            <div class="col col-half form-name s-col-full">
                                 <input type="text" class="input size-input-form"  placeholder="Name" required>
                             </div>
-                            <div class="col col-half form-email">
+                            <div class="col col-half form-email s-col-full">
                                 <input style="float: right;" type="text" class="input size-input-form"  placeholder="Email" required>
                             </div>
                         </div>
@@ -211,6 +215,30 @@
         modalContainer.addEventListener('click', function(event) {
             event.stopPropagation();
         });
+        var header = document.getElementById("header");
+        var mobileMe = document.getElementById("mobile-menu");
+        var headerHeight = header.clientHeight;
+        mobileMe.onclick = function() {
+            var isClosed = header.clientHeight === headerHeight;
+            if(isClosed) {
+                header.style.height = "auto";
+            } else {
+                header.style.height = "46px";
+            }
+        }
+        //Tự động đóng khi chọn menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for(var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+            menuItem.onclick = function(event) {
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if(isParentMenu) {
+                    event.preventDefault();
+                } else {
+                    header.style.height = "46px";
+                }
+            }
+        }
     </script>
 </body>
 </html>

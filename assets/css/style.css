@@ -34,10 +34,6 @@ html{
     z-index: 1000;
 }
 
-#nav{
-    
-}
-
 #nav li{
     display: inline-block;
     position: relative;
@@ -77,7 +73,8 @@ html{
 #nav .subnav li {
     display: block;
 }
-#header .search
+#header .search,
+ #header .mobile-menu-btn
 {
     position: absolute;
     right: 0;
@@ -87,10 +84,19 @@ html{
     color: #fff;
     text-decoration: none;
 }
-#header .search:hover
-{
-    background-color: #f44336;
+#header .mobile-menu-btn{
+    display: none;
+}
+#header .search:hover{
+background-color: #f44336;
     cursor: pointer;
+}
+#header .mobile-menu-btn:hover
+{
+    background-color: #ccc;
+}
+.mobile-menu-btn:hover .mobile-menu-icon{
+    color: #000;
 }
 
 #slider
@@ -118,10 +124,6 @@ html{
     font-size: 15px;
     margin-top: 25px;
 }
-#content
-{
-    
-}
 #content .container
 {
     padding: 64px 16px;
@@ -130,55 +132,6 @@ html{
     left: 50%;
     transform: translateX(-50%);
     transition: margin 0.3s ease-in-out, width 0.3s ease-in-out;
-}
-  @media (max-width: 1200px) {
-      .container {
-          float: center;
-      }
-      
-  }
-
-  @media (max-width: 808px) {
-      .container {
-          margin: 20px auto;
-          width: 100% !important;
-      }
-
-      .member-img {
-          max-width: 60.15%;
-      }
-      /* .modal{
-            width: 100%;
-      } */
-  }
-  @media (max-width: 600px) {
-    .container {
-        margin: 5px auto;
-        width: 100%;
-    }
-
-    .member-list {
-        flex-direction: column;
-        flex-shrink: 1;
-        max-width: 100%;
-    }
-    .member-item {
-        width: 100% !important;
-        height: 100% !important;
-        text-align: center;
-        margin-bottom: 32px;
-        margin-left: 0px !important;
-    }
-    .container>.member-img {
-        width: 331.91;
-        height: 331.91;
-    }
-    .modal{
-        width: 100%;
-    }
-  }
-#content .content-section{
-    
 }
 #content .section-heading{
     margin: 10px 0;
@@ -291,21 +244,16 @@ html{
 .container-tour .member-item + .member-item {
     margin-left: 8px;
 }
-.place-body{
-
+.phace-body{
+    padding: 0 16px ;
+    margin-top: 8px;
 }
 .nation-img{
    width: 100%;
 }
-.nation{
-    margin: 16px 0;
-}
 .date{
     margin: 15px 0;
     opacity: 0.6;
-}
-.description{
-
 }
 .buy-tickets{
     text-decoration: none;
@@ -315,7 +263,6 @@ html{
     display: inline-block;
     box-sizing: border-box;
     position: relative;
-    left: 16px;
     margin: 16px 0;
     cursor: pointer;
     border: 0px;
@@ -323,9 +270,6 @@ html{
 .buy-tickets:hover, .send:hover{
     background-color: #ccc;
     color: #000;
-}
-.nation, .date, .description{
-    padding: 0 16px;
 }
 
 .modal{
@@ -465,6 +409,7 @@ html{
 #footer{
     text-align: center;
     opacity: 0.6;
+    margin: 64px;
 }
 .link{
     cursor: pointer;

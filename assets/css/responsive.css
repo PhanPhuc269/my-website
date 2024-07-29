@@ -1,0 +1,98 @@
+@media (max-width: 1200px) {
+    .container {
+        float: center;
+    }
+}
+
+@media (max-width: 808px) {
+    .container {
+        margin: 20px auto;
+        width: 100% !important;
+    }
+
+    .member-img {
+        max-width: 60.15%;
+    }
+
+    .buy-tickets{
+        padding: 15px 16px;
+    }
+}
+
+@media (max-width: 740px) {
+    #nav>li {
+        display: block;
+
+    }
+    #header .mobile-menu-btn{
+        display: block;
+    }
+    #nav, #nav>li>a{
+        display: block;
+    }
+    #nav>li:first-child{
+        display: inline-block;
+    }
+    #nav .subnav {
+        position: initial;
+        background-color: #333;
+        padding: 0 40px;
+    }
+    #nav .subnav a{
+        color: #fff;
+        padding: 5px 48px;
+    }
+    #header .search {
+        display: none;
+    }
+    #header{
+        overflow: hidden;
+    }
+    .container {
+        margin: 5px auto;
+        width: 100%;
+    }
+
+    .member-list {
+        flex-direction: column;
+        flex-shrink: 1;
+        max-width: 100%;
+    }
+
+    .member-item {
+        width: 100% !important;
+        height: 100% !important;
+        text-align: center;
+        margin-bottom: 32px;
+        margin-left: 0px !important;
+    }
+
+    .container>.member-img {
+        width: 331.91;
+        height: 331.91;
+    }
+
+    .modal {
+        width: 100%;
+    }
+    .s-col-full{
+        width: 100%;
+    }
+    .name-email{
+        display: block;
+        margin-top: 8px;
+    }
+    .form-name{
+        height: auto;
+        margin-bottom: 16px;
+    }
+    .form-email{
+        float: none;
+    }
+    .send{
+        width: 100%;
+    }
+    .buy-tickets{
+        width: 100%;
+    }
+}
